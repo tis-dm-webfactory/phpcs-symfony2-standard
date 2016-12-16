@@ -61,7 +61,7 @@ class Symfony2_Sniffs_Commenting_ClassCommentSniff extends PEAR_Sniffs_Commentin
             'order_text'     => 'precedes @package',
         ),
         'package'    => array(
-            'required'       => true,
+            'required'       => false,
             'allow_multiple' => false,
             'order_text'     => 'follows @category',
         ),
@@ -71,7 +71,7 @@ class Symfony2_Sniffs_Commenting_ClassCommentSniff extends PEAR_Sniffs_Commentin
             'order_text'     => 'follows @package',
         ),
         'author'     => array(
-            'required'       => true,
+            'required'       => false,
             'allow_multiple' => true,
             'order_text'     => 'follows @subpackage (if used) or @package',
         ),
