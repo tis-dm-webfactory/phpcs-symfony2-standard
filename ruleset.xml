@@ -70,7 +70,11 @@
         <!-- do not check line length -->
         <exclude name="Generic.Files.LineLength"/>
         <exclude name="Generic.WhiteSpace.DisallowTabIndent"/>
+
+        <exclude name="Generic.Functions.OpeningFunctionBraceBsdAllman"/>
     </rule>
+
+	<rule ref="Generic.Functions.OpeningFunctionBraceKernighanRitchie" />
 
 	<rule ref="Generic.WhiteSpace.ScopeIndent">
         <properties>
@@ -114,6 +118,4 @@
     </rule>
 
     <rule ref="Symfony2.Formatting.BlankLineBeforeReturn"/>
-
-    <rule ref="Generic.Functions.OpeningFunctionBraceKernighanRitchie" />
 </ruleset>
