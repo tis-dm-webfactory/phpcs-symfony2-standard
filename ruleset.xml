@@ -62,7 +62,15 @@
 
         <!-- do not check line length -->
         <exclude name="Generic.Files.LineLength"/>
-    </rule>
+		<exclude name="Generic.WhiteSpace.DisallowTabIndent"/>
+	</rule>
+
+	<rule ref="Generic.WhiteSpace.ScopeIndent">
+		<properties>
+			<property name="indent" value="4"/>
+			<property name="tabIndent" value="true"/>
+		</properties>
+	</rule>
 
     <!-- Don't enforce Zend's private member underscores -->
     <rule ref="Zend.NamingConventions.ValidVariableName.PrivateNoUnderscore">
