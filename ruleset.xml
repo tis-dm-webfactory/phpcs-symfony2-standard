@@ -49,6 +49,9 @@
 
     <!-- We provide our own subclass of PEAR's ClassComment and FunctionComment sniff, but these will do: -->
     <rule ref="PEAR.Commenting.InlineComment"/>
+    <rule ref="PEAR.Commenting.FunctionComment"/>
+
+	<rule ref="PEAR.ControlStructures.MultiLineCondition"/>
 
     <!-- Import Zend coding standard (which in turn imports PEAR) -->
     <rule ref="Zend">
@@ -59,18 +62,22 @@
         <exclude name="PEAR.ControlStructures.ControlSignature"/>
 
         <exclude name="PEAR.Commenting.FunctionComment.SpacingBeforeTags"/>
+		<exclude name="PEAR.Commenting.ClassComment"/>
+		<exclude name="PEAR.Commenting.FileComment"/>
+
+		<exclude name="PEAR.Classes.ClassDeclaration" />
 
         <!-- do not check line length -->
         <exclude name="Generic.Files.LineLength"/>
-		<exclude name="Generic.WhiteSpace.DisallowTabIndent"/>
-	</rule>
+        <exclude name="Generic.WhiteSpace.DisallowTabIndent"/>
+    </rule>
 
 	<rule ref="Generic.WhiteSpace.ScopeIndent">
-		<properties>
-			<property name="indent" value="4"/>
-			<property name="tabIndent" value="true"/>
-		</properties>
-	</rule>
+        <properties>
+            <property name="indent" value="4"/>
+            <property name="tabIndent" value="true"/>
+        </properties>
+    </rule>
 
     <!-- Don't enforce Zend's private member underscores -->
     <rule ref="Zend.NamingConventions.ValidVariableName.PrivateNoUnderscore">
@@ -107,4 +114,6 @@
     </rule>
 
     <rule ref="Symfony2.Formatting.BlankLineBeforeReturn"/>
+
+    <rule ref="Generic.Functions.OpeningFunctionBraceKernighanRitchie" />
 </ruleset>
