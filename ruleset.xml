@@ -29,7 +29,7 @@
 	-->
 
 	<rule ref="Generic">
-		<exclude name="Generic.Functions.OpeningFunctionBraceBsdAllman"/>
+		<!--<exclude name="Generic.Functions.OpeningFunctionBraceBsdAllman"/>-->
 		<exclude name="Generic.WhiteSpace.DisallowTabIndent"/>
 		<exclude name="Generic.Formatting.MultipleStatementAlignment"/>
 		<exclude name="Generic.Files.LowercasedFilename"/>
@@ -91,6 +91,8 @@
 		<!--<exclude name="Squiz.Operators.ValidLogicalOperators"/>-->
 		<exclude name="Squiz.Operators"/>
 		<exclude name="Squiz.NamingConventions"/>
+		<exclude name="Squiz.ControlStructures"/>
+		<exclude name="Squiz.Functions.FunctionDeclarationArgumentSpacing"/>
 	</rule>
 
 	<rule ref="Squiz.ControlStructures.ControlSignature"/>
