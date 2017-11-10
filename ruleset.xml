@@ -1,110 +1,172 @@
 <?xml version="1.0"?>
 <ruleset name="Symfony2">
-    <description>The Symfony2 coding standard.</description>
+	<description>The Symfony2 coding standard.</description>
 
-    <!-- There should not be any code in the bundle Resources directory. -->
-    <exclude-pattern>*/Resources/*</exclude-pattern>
+	<!-- There should not be any code in the bundle Resources directory. -->
+	<exclude-pattern>*/Resources/*</exclude-pattern>
+	<exclude-pattern>*/DependencyInjection/*</exclude-pattern>
+	<exclude-pattern>*/*Bundle.php</exclude-pattern>
 
-    <!--
+	<!--
 
-    See the [documented coding standard](http://symfony.com/doc/current/contributing/code/standards.html)
+	See the [documented coding standard](http://symfony.com/doc/current/contributing/code/standards.html)
 
-    This CodeSniffer standard does not yet enforce the following:
+	This CodeSniffer standard does not yet enforce the following:
 
-    # Structure
+	# Structure
 
-    * Declare class properties before methods;
-    * Declare public methods first, then protected ones and finally private ones.
-    * Use namespaces for all classes;
-    * Add PHPDoc blocks for all classes, methods, and functions;
-    * The @package and @subpackage annotations are not used.
-    * Use uppercase strings for constants with words separated with underscores
+	* Declare class properties before methods;
+	* Declare public methods first, then protected ones and finally private ones.
+	* Use namespaces for all classes;
+	* Add PHPDoc blocks for all classes, methods, and functions;
+	* The @package and @subpackage annotations are not used.
+	* Use uppercase strings for constants with words separated with underscores
 
-    # Naming Conventions
+	# Naming Conventions
 
-    * Use underscores for option, argument, parameter names;
+	* Use underscores for option, argument, parameter names;
 
-    -->
+	-->
 
-    <rule ref="Generic.ControlStructures.InlineControlStructure"/>
-    <rule ref="Generic.Formatting.SpaceAfterCast"/>
-    <rule ref="Generic.Functions.CallTimePassByReference"/>
+	<rule ref="Generic">
+		<exclude name="Generic.Functions.OpeningFunctionBraceBsdAllman"/>
+		<exclude name="Generic.WhiteSpace.DisallowTabIndent"/>
+		<exclude name="Generic.Formatting.MultipleStatementAlignment"/>
+		<exclude name="Generic.Files.LowercasedFilename"/>
+		<exclude name="Generic.Files.EndFileNoNewline"/>
+		<exclude name="Generic.PHP.UpperCaseConstant"/>
+		<exclude name="Generic.PHP.ClosingPHPTag"/>
+		<exclude name="Generic.Commenting.DocComment"/>
+		<exclude name="Generic.Arrays"/>
+	</rule>
 
-    <rule ref="Generic.WhiteSpace.DisallowSpaceIndent"/>
-    <rule ref="Generic.WhiteSpace.ScopeIndent">
-        <properties>
-            <property name="indent" value="4"/>
-            <property name="tabIndent" value="true"/>
-        </properties>
-    </rule>
+	<rule ref="Generic.Classes.DuplicateClassName"/>
+	<rule ref="Generic.Classes.OpeningBraceSameLine"/>
+	<rule ref="Generic.CodeAnalysis.EmptyStatement"/>
+	<rule ref="Generic.CodeAnalysis.ForLoopShouldBeWhileLoop"/>
+	<rule ref="Generic.CodeAnalysis.JumbledIncrementer"/>
+	<rule ref="Generic.CodeAnalysis.UnconditionalIfStatement"/>
+	<rule ref="Generic.CodeAnalysis.UnnecessaryFinalModifier"/>
+	<rule ref="Generic.CodeAnalysis.UselessOverridingMethod"/>
+	<rule ref="Generic.Commenting.Todo"/>
+	<rule ref="Generic.Commenting.Fixme"/>
+	<rule ref="Generic.ControlStructures.InlineControlStructure"/>
+	<rule ref="Generic.Files.ByteOrderMark"/>
+	<rule ref="Generic.Files.LineEndings"/>
+	<rule ref="Generic.Formatting.DisallowMultipleStatements"/>
+	<rule ref="Generic.Functions.OpeningFunctionBraceKernighanRitchie"/>
+	<rule ref="Generic.NamingConventions.CamelCapsFunctionName"/>
+	<rule ref="Generic.PHP.DisallowShortOpenTag"/>
+	<rule ref="Generic.PHP.ForbiddenFunctions"/>
+	<rule ref="Generic.PHP.LowerCaseConstant"/>
 
-    <!-- Doctrine Event Constants are not uppercase -->
-    <!--<rule ref="Generic.NamingConventions.UpperCaseConstantName"/>-->
-    <rule ref="Generic.PHP.LowerCaseConstant"/>
-    <rule ref="Squiz.Arrays.ArrayBracketSpacing"/>
-    <rule ref="Squiz.ControlStructures.ControlSignature"/>
-    <rule ref="Squiz.ControlStructures.ForEachLoopDeclaration"/>
-    <rule ref="Squiz.ControlStructures.ForLoopDeclaration"/>
-    <rule ref="Squiz.ControlStructures.LowercaseDeclaration"/>
-    <rule ref="Squiz.Strings.DoubleQuoteUsage.ContainsVar"/>
-    <rule ref="Squiz.PHP.LowercasePHPFunctions"/>
-    <rule ref="Squiz.PHP.CommentedOutCode">
-        <properties>
-            <property name="maxPercentage" value="60"/>
-        </properties>
-    </rule>
-    <rule ref="Squiz.Scope.MemberVarScope"/>
-    <rule ref="Squiz.Scope.MethodScope"/>
+	<rule ref="Generic.ControlStructures.InlineControlStructure"/>
+	<rule ref="Generic.Formatting.SpaceAfterCast"/>
+	<rule ref="Generic.Functions.CallTimePassByReference"/>
 
-    <!-- We provide our own subclass of PEAR's ClassComment and FunctionComment sniff, but these will do: -->
-    <rule ref="PEAR.Commenting.InlineComment"/>
+	<rule ref="Generic.WhiteSpace.DisallowSpaceIndent"/>
+	<rule ref="Generic.WhiteSpace.ScopeIndent">
+		<properties>
+			<property name="indent" value="4"/>
+			<property name="tabIndent" value="true"/>
+		</properties>
+	</rule>
 
-    <!-- Import Zend coding standard (which in turn imports PEAR) -->
-    <rule ref="Zend">
-        <!-- but exclude their code analyzer -->
-        <exclude name="Zend.Debug.CodeAnalyzer"/>
+	<!-- Doctrine Event Constants are not uppercase -->
+	<!--<rule ref="Generic.NamingConventions.UpperCaseConstantName"/>-->
 
-        <!-- covered by Squiz ControlSignature, which enforces try/catch as well -->
-        <exclude name="PEAR.ControlStructures.ControlSignature"/>
+	<rule ref="Squiz">
+		<!--<exclude name="Squiz.Arrays.ArrayBracketSpacing"/>-->
+		<!--<exclude name="Squiz.Arrays.ArrayDeclaration"/>-->
+		<exclude name="Squiz.Arrays"/>
+		<exclude name="Squiz.Files.FileExtension"/>
+		<exclude name="Squiz.Formatting.OperatorBracket"/>
+		<!--<exclude name="Squiz.WhiteSpace.FunctionSpacing"/>-->
+		<!--<exclude name="Squiz.WhiteSpace.FunctionClosingBraceSpace"/>-->
+		<!--<exclude name="Squiz.WhiteSpace.ObjectOperatorSpacing"/>-->
+		<exclude name="Squiz.WhiteSpace"/>
+		<exclude name="Squiz.Strings.ConcatenationSpacing"/>
+		<!--<exclude name="Squiz.Commenting.LongConditionClosingComment"/>-->
+		<exclude name="Squiz.Commenting"/>
+		<!--<exclude name="Squiz.Operators.ValidLogicalOperators"/>-->
+		<exclude name="Squiz.Operators"/>
+		<exclude name="Squiz.NamingConventions"/>
+	</rule>
 
-        <exclude name="PEAR.Commenting.FunctionComment.SpacingBeforeTags"/>
+	<rule ref="Squiz.ControlStructures.ControlSignature"/>
+	<rule ref="Squiz.ControlStructures.ForEachLoopDeclaration"/>
+	<rule ref="Squiz.ControlStructures.ForLoopDeclaration"/>
+	<rule ref="Squiz.ControlStructures.LowercaseDeclaration"/>
+	<rule ref="Squiz.Strings.DoubleQuoteUsage.ContainsVar"/>
+	<rule ref="Squiz.PHP.LowercasePHPFunctions"/>
+	<!--<rule ref="Squiz.PHP.CommentedOutCode">-->
+		<!--<properties>-->
+			<!--<property name="maxPercentage" value="60"/>-->
+		<!--</properties>-->
+	<!--</rule>-->
+	<rule ref="Squiz.Scope.MemberVarScope"/>
+	<rule ref="Squiz.Scope.MethodScope"/>
 
-        <!-- do not check line length -->
-        <exclude name="Generic.Files.LineLength"/>
-    </rule>
+	<rule ref="PEAR">
+		<exclude name="PEAR.Classes.ClassDeclaration"/>
+		<exclude name="PEAR.NamingConventions.ValidFunctionName"/>
+	</rule>
 
-    <!-- Don't enforce Zend's private member underscores -->
-    <rule ref="Zend.NamingConventions.ValidVariableName.PrivateNoUnderscore">
-        <severity>0</severity>
-    </rule>
+	<!-- We provide our own subclass of PEAR's ClassComment and FunctionComment sniff, but these will do: -->
+	<rule ref="PEAR.Commenting.InlineComment"/>
 
-    <!-- Ignore variables that contains numbers -->
-    <rule ref="Zend.NamingConventions.ValidVariableName.ContainsNumbers">
-        <severity>0</severity>
-    </rule>
+	<!-- Import Zend coding standard (which in turn imports PEAR) -->
+	<rule ref="Zend">
+		<!-- but exclude their code analyzer -->
+		<exclude name="Zend.Debug.CodeAnalyzer"/>
+		<exclude name="Zend.NamingConventions.ValidVariableName"/>
 
-    <!-- In practice, Symfony2 spaces multiline function calls differently than Zend -->
-    <rule ref="PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracket">
-        <severity>0</severity>
-    </rule>
-    <rule ref="PEAR.Functions.FunctionCallSignature.SpaceAfterCloseBracket">
-        <severity>0</severity>
-    </rule>
-    <rule ref="PEAR.Functions.FunctionCallSignature.CloseBracketLine">
-        <severity>0</severity>
-    </rule>
+		<!-- covered by Squiz ControlSignature, which enforces try/catch as well -->
+		<exclude name="PEAR.ControlStructures.ControlSignature"/>
 
-    <rule ref="Symfony2.Commenting.FunctionComment.MissingParamComment">
-        <severity>0</severity>
-    </rule>
+		<exclude name="PEAR.Commenting.FunctionComment.SpacingBeforeTags"/>
 
-    <rule ref="Symfony2.Commenting.FunctionComment.SpacingBeforeTags">
-        <severity>0</severity>
-    </rule>
+		<!-- do not check line length -->
+		<exclude name="Generic.Files.LineLength"/>
+	</rule>
 
-    <rule ref="Symfony2.Commenting.ClassComment.SpacingBeforeTags">
-        <message>There should always be a description, followed by a blank line, before the tags of a class comment.</message>
-    </rule>
+	<!-- Don't enforce Zend's private member underscores -->
+	<rule ref="Zend.NamingConventions.ValidVariableName.PrivateNoUnderscore">
+		<severity>0</severity>
+	</rule>
 
-    <rule ref="Symfony2.Formatting.BlankLineBeforeReturn"/>
+	<!-- Ignore variables that contains numbers -->
+	<rule ref="Zend.NamingConventions.ValidVariableName.ContainsNumbers">
+		<severity>0</severity>
+	</rule>
+
+	<!-- In practice, Symfony2 spaces multiline function calls differently than Zend -->
+	<rule ref="PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracket">
+		<severity>0</severity>
+	</rule>
+	<rule ref="PEAR.Functions.FunctionCallSignature.SpaceAfterCloseBracket">
+		<severity>0</severity>
+	</rule>
+	<rule ref="PEAR.Functions.FunctionCallSignature.CloseBracketLine">
+		<severity>0</severity>
+	</rule>
+
+	<!--<rule ref="Symfony2">-->
+		<!--<exclude name="Symfony2.Commenting.FunctionComment"/>-->
+	<!--</rule>-->
+
+	<rule ref="Symfony2.Commenting.FunctionComment.MissingParamComment">
+		<severity>0</severity>
+	</rule>
+
+	<rule ref="Symfony2.Commenting.FunctionComment.SpacingBeforeTags">
+		<severity>0</severity>
+	</rule>
+
+	<rule ref="Symfony2.Commenting.ClassComment.SpacingBeforeTags">
+		<message>There should always be a description, followed by a blank line, before the tags of a class comment.
+		</message>
+	</rule>
+
+	<rule ref="Symfony2.Formatting.BlankLineBeforeReturn"/>
 </ruleset>
