@@ -29,7 +29,6 @@
 	-->
 
 	<rule ref="Generic">
-		<!--<exclude name="Generic.Functions.OpeningFunctionBraceBsdAllman"/>-->
 		<exclude name="Generic.WhiteSpace.DisallowTabIndent"/>
 		<exclude name="Generic.Formatting.MultipleStatementAlignment"/>
 		<exclude name="Generic.Files.LowercasedFilename"/>
@@ -38,6 +37,7 @@
 		<exclude name="Generic.PHP.ClosingPHPTag"/>
 		<exclude name="Generic.Commenting.DocComment"/>
 		<exclude name="Generic.Arrays"/>
+		<exclude name="Generic.Functions.OpeningFunctionBraceBsdAllman.BraceOnSameLine"/>
 	</rule>
 
 	<rule ref="Generic.Classes.DuplicateClassName"/>
@@ -93,6 +93,8 @@
 		<exclude name="Squiz.NamingConventions"/>
 		<exclude name="Squiz.ControlStructures"/>
 		<exclude name="Squiz.Functions.FunctionDeclarationArgumentSpacing"/>
+		<exclude name="Squiz.Classes.ClassDeclaration"/>
+		<exclude name="Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine"/>
 	</rule>
 
 	<rule ref="Squiz.ControlStructures.ControlSignature"/>
@@ -111,7 +113,10 @@
 
 	<rule ref="PEAR">
 		<exclude name="PEAR.Classes.ClassDeclaration"/>
-		<exclude name="PEAR.NamingConventions.ValidFunctionName"/>
+		<exclude name="PEAR.NamingConventions"/>
+		<exclude name="PEAR.Functions.FunctionDeclaration.BraceOnSameLine"/>
+		<exclude name="PEAR.Functions.FunctionCallSignature.Indent"/>
+		<exclude name="PEAR.Commenting.FileComment.Missing"/>
 	</rule>
 
 	<!-- We provide our own subclass of PEAR's ClassComment and FunctionComment sniff, but these will do: -->
