@@ -116,7 +116,11 @@
 		<exclude name="PEAR.NamingConventions"/>
 		<exclude name="PEAR.Functions.FunctionDeclaration.BraceOnSameLine"/>
 		<exclude name="PEAR.Functions.FunctionCallSignature.Indent"/>
-		<exclude name="PEAR.Commenting.FileComment.Missing"/>
+		<exclude name="PEAR.Commenting.FileComment"/>
+        <exclude name="PEAR.Commenting.ClassComment.Missing"/>
+        <exclude name="PEAR.Commenting.ClassComment.MissingCategoryTag"/>
+        <exclude name="PEAR.Commenting.ClassComment.MissingLicenseTag"/>
+        <exclude name="PEAR.Commenting.ClassComment.MissingLinkTag"/>
 	</rule>
 
 	<!-- We provide our own subclass of PEAR's ClassComment and FunctionComment sniff, but these will do: -->
