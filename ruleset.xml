@@ -122,6 +122,7 @@
         <exclude name="PEAR.Commenting.ClassComment.MissingLicenseTag"/>
         <exclude name="PEAR.Commenting.ClassComment.MissingLinkTag"/>
 		<exclude name="PEAR.Commenting.FunctionComment.MissingParamTag"/>
+		<exclude name="PEAR.Commenting.FunctionComment.MissingParamComment"/>
 	</rule>
 
 	<!-- We provide our own subclass of PEAR's ClassComment and FunctionComment sniff, but these will do: -->
