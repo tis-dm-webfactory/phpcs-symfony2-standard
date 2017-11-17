@@ -38,6 +38,7 @@
 		<exclude name="Generic.Commenting.DocComment"/>
 		<exclude name="Generic.Arrays"/>
 		<exclude name="Generic.Functions.OpeningFunctionBraceBsdAllman.BraceOnSameLine"/>
+		<exclude name="Generic.Formatting.SpaceAfterNot.Incorrect"/>
 	</rule>
 
 	<rule ref="Generic.Classes.DuplicateClassName"/>
@@ -153,6 +154,10 @@
 		<severity>0</severity>
 	</rule>
 
+	<rule ref="PSR2">
+		<exclude name="PSR2.Files.EndFileNewline.NoneFound"/>
+	</rule>
+	
 	<!-- In practice, Symfony2 spaces multiline function calls differently than Zend -->
 	<rule ref="PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracket">
 		<severity>0</severity>
