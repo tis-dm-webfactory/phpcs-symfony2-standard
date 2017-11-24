@@ -73,29 +73,23 @@
 		</properties>
 	</rule>
 
-	<!-- Doctrine Event Constants are not uppercase -->
-	<!--<rule ref="Generic.NamingConventions.UpperCaseConstantName"/>-->
-
 	<rule ref="Squiz">
-		<!--<exclude name="Squiz.Arrays.ArrayBracketSpacing"/>-->
-		<!--<exclude name="Squiz.Arrays.ArrayDeclaration"/>-->
 		<exclude name="Squiz.Arrays"/>
 		<exclude name="Squiz.Files.FileExtension"/>
 		<exclude name="Squiz.Formatting.OperatorBracket"/>
-		<!--<exclude name="Squiz.WhiteSpace.FunctionSpacing"/>-->
-		<!--<exclude name="Squiz.WhiteSpace.FunctionClosingBraceSpace"/>-->
-		<!--<exclude name="Squiz.WhiteSpace.ObjectOperatorSpacing"/>-->
 		<exclude name="Squiz.WhiteSpace"/>
 		<exclude name="Squiz.Strings.ConcatenationSpacing"/>
-		<!--<exclude name="Squiz.Commenting.LongConditionClosingComment"/>-->
 		<exclude name="Squiz.Commenting"/>
-		<!--<exclude name="Squiz.Operators.ValidLogicalOperators"/>-->
 		<exclude name="Squiz.Operators"/>
 		<exclude name="Squiz.NamingConventions"/>
 		<exclude name="Squiz.ControlStructures"/>
 		<exclude name="Squiz.Functions.FunctionDeclarationArgumentSpacing"/>
 		<exclude name="Squiz.Classes.ClassDeclaration"/>
 		<exclude name="Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine"/>
+		<exclude name="Squiz.Objects.ObjectInstantiation.NotAssigned"/>
+		<exclude name="Squiz.PHP.DisallowComparisonAssignment"/>
+		<exclude name="Squiz.PHP.DisallowBooleanStatement"/>
+		<exclude name="Squiz.PHP.DisallowMultipleAssignments"/>
 	</rule>
 
 	<rule ref="Squiz.ControlStructures.ControlSignature"/>
@@ -104,11 +98,6 @@
 	<rule ref="Squiz.ControlStructures.LowercaseDeclaration"/>
 	<rule ref="Squiz.Strings.DoubleQuoteUsage.ContainsVar"/>
 	<rule ref="Squiz.PHP.LowercasePHPFunctions"/>
-	<!--<rule ref="Squiz.PHP.CommentedOutCode">-->
-		<!--<properties>-->
-			<!--<property name="maxPercentage" value="60"/>-->
-		<!--</properties>-->
-	<!--</rule>-->
 	<rule ref="Squiz.Scope.MemberVarScope"/>
 	<rule ref="Squiz.Scope.MethodScope"/>
 
@@ -118,12 +107,14 @@
 		<exclude name="PEAR.Functions.FunctionDeclaration.BraceOnSameLine"/>
 		<exclude name="PEAR.Functions.FunctionCallSignature.Indent"/>
 		<exclude name="PEAR.Commenting.FileComment"/>
-        <exclude name="PEAR.Commenting.ClassComment.Missing"/>
-        <exclude name="PEAR.Commenting.ClassComment.MissingCategoryTag"/>
-        <exclude name="PEAR.Commenting.ClassComment.MissingLicenseTag"/>
-        <exclude name="PEAR.Commenting.ClassComment.MissingLinkTag"/>
+		<exclude name="PEAR.Commenting.ClassComment.Missing"/>
+		<exclude name="PEAR.Commenting.ClassComment.MissingCategoryTag"/>
+		<exclude name="PEAR.Commenting.ClassComment.MissingLicenseTag"/>
+		<exclude name="PEAR.Commenting.ClassComment.MissingLinkTag"/>
+		<exclude name="PEAR.Commenting.ClassComment.InvalidAuthors"/>
 		<exclude name="PEAR.Commenting.FunctionComment.MissingParamTag"/>
 		<exclude name="PEAR.Commenting.FunctionComment.MissingParamComment"/>
+		<exclude name="PEAR.Commenting.FunctionComment.Missing"/>
 	</rule>
 
 	<!-- We provide our own subclass of PEAR's ClassComment and FunctionComment sniff, but these will do: -->
@@ -156,8 +147,10 @@
 
 	<rule ref="PSR2">
 		<exclude name="PSR2.Files.EndFileNewline.NoneFound"/>
+		<exclude name="PSR2.Classes.ClassDeclaration"/>
+		<exclude name="PSR2.Methods.FunctionCallSignature.ContentAfterOpenBracket"/>
 	</rule>
-	
+
 	<!-- In practice, Symfony2 spaces multiline function calls differently than Zend -->
 	<rule ref="PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracket">
 		<severity>0</severity>
@@ -168,10 +161,6 @@
 	<rule ref="PEAR.Functions.FunctionCallSignature.CloseBracketLine">
 		<severity>0</severity>
 	</rule>
-
-	<!--<rule ref="Symfony2">-->
-		<!--<exclude name="Symfony2.Commenting.FunctionComment"/>-->
-	<!--</rule>-->
 
 	<rule ref="Symfony2.Commenting.FunctionComment.MissingParamComment">
 		<severity>0</severity>
