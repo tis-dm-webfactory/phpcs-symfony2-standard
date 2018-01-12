@@ -125,6 +125,7 @@
 		<exclude name="PEAR.Commenting.FunctionComment.Missing"/>
 		<exclude name="PEAR.ControlStructures.MultiLineCondition.SpacingAfterOpenBrace"/>
 		<exclude name="PEAR.ControlStructures.MultiLineCondition.StartWithBoolean"/>
+		<exclude name="PEAR.ControlStructures.MultiLineCondition.Alignment"/>
 		<exclude name="PEAR.Files.IncludingFile.BracketsNotRequired"/>
 	</rule>
 
