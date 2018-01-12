@@ -39,6 +39,7 @@
 		<exclude name="Generic.Arrays"/>
 		<exclude name="Generic.Functions.OpeningFunctionBraceBsdAllman.BraceOnSameLine"/>
 		<exclude name="Generic.Formatting.SpaceAfterNot.Incorrect"/>
+		<exclude name="Generic.NamingConventions.CamelCapsFunctionName.ScopeNotCamelCaps"/>
 	</rule>
 
 	<rule ref="Generic.Classes.DuplicateClassName"/>
@@ -116,6 +117,7 @@
 		<exclude name="PEAR.Commenting.FunctionComment.MissingParamComment"/>
 		<exclude name="PEAR.Commenting.FunctionComment.Missing"/>
 		<exclude name="PEAR.ControlStructures.MultiLineCondition.SpacingAfterOpenBrace"/>
+		<exclude name="PEAR.ControlStructures.MultiLineCondition.StartWithBoolean"/>
 	</rule>
 
 	<!-- We provide our own subclass of PEAR's ClassComment and FunctionComment sniff, but these will do: -->
@@ -151,6 +153,7 @@
 		<exclude name="PSR2.Classes.ClassDeclaration"/>
 		<exclude name="PSR2.Methods.FunctionCallSignature.ContentAfterOpenBracket"/>
 		<exclude name="PSR2.ControlStructures.ElseIfDeclaration.NotAllowed"/>
+		<exclude name="PSR2.ControlStructures.ControlStructureSpacing.SpacingAfterOpenBrace"/>
 	</rule>
 
 	<!-- In practice, Symfony2 spaces multiline function calls differently than Zend -->
