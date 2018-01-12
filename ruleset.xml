@@ -103,6 +103,12 @@
 	<rule ref="Squiz.Scope.MemberVarScope"/>
 	<rule ref="Squiz.Scope.MethodScope"/>
 
+	<rule ref="Squiz.PHP.CommentedOutCode.Found">
+		<properties>
+			<property name="maxPercentage" value="60"/>
+		</properties>
+	</rule>
+
 	<rule ref="PEAR">
 		<exclude name="PEAR.Classes.ClassDeclaration"/>
 		<exclude name="PEAR.NamingConventions"/>
