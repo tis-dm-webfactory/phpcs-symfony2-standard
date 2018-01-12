@@ -91,6 +91,7 @@
 		<exclude name="Squiz.PHP.DisallowComparisonAssignment"/>
 		<exclude name="Squiz.PHP.DisallowBooleanStatement"/>
 		<exclude name="Squiz.PHP.DisallowMultipleAssignments"/>
+		<exclude name="Squiz.PHP.DisallowInlineIf.Found"/>
 	</rule>
 
 	<rule ref="Squiz.ControlStructures.ControlSignature"/>
