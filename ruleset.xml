@@ -155,6 +155,7 @@
 		<exclude name="PSR2.Methods.FunctionCallSignature.ContentAfterOpenBracket"/>
 		<exclude name="PSR2.ControlStructures.ElseIfDeclaration.NotAllowed"/>
 		<exclude name="PSR2.ControlStructures.ControlStructureSpacing.SpacingAfterOpenBrace"/>
+		<exclude name="PSR2.Methods.FunctionCallSignature.SpaceBeforeOpenBracket"/>
 	</rule>
 
 	<!-- In practice, Symfony2 spaces multiline function calls differently than Zend -->
