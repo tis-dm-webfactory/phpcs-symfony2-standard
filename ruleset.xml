@@ -115,6 +115,7 @@
 		<exclude name="PEAR.Commenting.FunctionComment.MissingParamTag"/>
 		<exclude name="PEAR.Commenting.FunctionComment.MissingParamComment"/>
 		<exclude name="PEAR.Commenting.FunctionComment.Missing"/>
+		<exclude name="PEAR.ControlStructures.MultiLineCondition.SpacingAfterOpenBrace"/>
 	</rule>
 
 	<!-- We provide our own subclass of PEAR's ClassComment and FunctionComment sniff, but these will do: -->
