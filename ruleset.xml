@@ -149,6 +149,7 @@
 		<exclude name="PSR2.Files.EndFileNewline.NoneFound"/>
 		<exclude name="PSR2.Classes.ClassDeclaration"/>
 		<exclude name="PSR2.Methods.FunctionCallSignature.ContentAfterOpenBracket"/>
+		<exclude name="PSR2.ControlStructures.ElseIfDeclaration.NotAllowed"/>
 	</rule>
 
 	<!-- In practice, Symfony2 spaces multiline function calls differently than Zend -->
