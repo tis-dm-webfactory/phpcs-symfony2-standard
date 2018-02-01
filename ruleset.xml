@@ -40,6 +40,7 @@
 		<exclude name="Generic.Functions.OpeningFunctionBraceBsdAllman.BraceOnSameLine"/>
 		<exclude name="Generic.Formatting.SpaceAfterNot.Incorrect"/>
 		<exclude name="Generic.NamingConventions.CamelCapsFunctionName.ScopeNotCamelCaps"/>
+		<exclude name="Generic.CodeAnalysis.ForLoopWithTestFunctionCall.NotAllowed"/>
 	</rule>
 
 	<rule ref="Generic.Classes.DuplicateClassName"/>
