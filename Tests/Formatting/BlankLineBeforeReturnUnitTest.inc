@@ -1,33 +1,29 @@
 <?php
-function validFunctionReturnOne()
-{
-    return;
+function validFunctionReturnOne() {
+	return;
 }
 
-function validFunctionReturnTwo()
-{
+function validFunctionReturnTwo() {
 
-    return;
+	return;
 }
 
-function validFunctionReturnThree()
-{
-    echo "";
+function validFunctionReturnThree() {
+	echo "";
 
-    return;
+	return;
 }
 
-function invalidFunctionReturnOne()
-{
-    echo "";
-    return;
+function invalidFunctionReturnOne() {
+	echo "";
+	return;
 }
 
 switch ($condition) {
-    case 'foo':
-        return true;
+	case 'foo':
+		return true;
 
-    default:
-        return false;
+	default:
+		return false;
 }
 

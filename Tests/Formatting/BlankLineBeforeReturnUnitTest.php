@@ -25,35 +25,30 @@
  * @license   http://spdx.org/licenses/MIT MIT License
  * @link      https://github.com/opensky/Symfony2-coding-standard
  */
-class Symfony2_Tests_Formatting_BlankLineBeforeReturnUnitTest extends AbstractSniffUnitTest
-{
-    /**
-     * Returns the lines where errors should occur.
-     *
-     * The key of the array should represent the line number and the value
-     * should represent the number of errors that should occur on that line.
-     *
-     * @return array(int => int)
-     */
-    public function getErrorList()
-    {
-        return array(
-            23 => 1,
-        );
+class Symfony2_Tests_Formatting_BlankLineBeforeReturnUnitTest extends AbstractSniffUnitTest {
+	/**
+	 * Returns the lines where errors should occur.
+	 *
+	 * The key of the array should represent the line number and the value
+	 * should represent the number of errors that should occur on that line.
+	 *
+	 * @return array(int => int)
+	 */
+	public function getErrorList() {
+		return array(
+			23 => 1,
+		);
+	}
 
-    }
-
-    /**
-     * Returns the lines where warnings should occur.
-     *
-     * The key of the array should represent the line number and the value
-     * should represent the number of warnings that should occur on that line.
-     *
-     * @return array(int => int)
-     */
-    public function getWarningList()
-    {
-        return array();
-
-    }
+	/**
+	 * Returns the lines where warnings should occur.
+	 *
+	 * The key of the array should represent the line number and the value
+	 * should represent the number of warnings that should occur on that line.
+	 *
+	 * @return array(int => int)
+	 */
+	public function getWarningList() {
+		return array();
+	}
 }

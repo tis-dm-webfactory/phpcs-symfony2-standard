@@ -1,17 +1,21 @@
 {
-    "name": "leaphub/phpcs-symfony2-standard",
-    "keywords": ["phpcs", "Symfony 2", "coding standard"],
-    "homepage": "https://github.com/leaphub/phpcs-symfony2-standard",
-    "description": "A PHP_CodeSniffer standard for Symfony 2 applications",
-    "license": "MIT",
-    "require": {
-        "squizlabs/php_codesniffer": "~3.0"
-    },
-    "target-dir": "leaphub/phpcs/Symfony2",
-    "extra": {
-        "branch-alias": {
-            "dev-master": "2.1-dev"
-        }
-    }
+	"name": "leaphub/phpcs-symfony2-standard",
+	"keywords": [
+		"phpcs",
+		"Symfony 2",
+		"coding standard"
+	],
+	"homepage": "https://github.com/leaphub/phpcs-symfony2-standard",
+	"description": "A PHP_CodeSniffer standard for Symfony 2 applications",
+	"license": "MIT",
+	"require": {
+		"squizlabs/php_codesniffer": "~3.0"
+	},
+	"target-dir": "leaphub/phpcs/Symfony2",
+	"extra": {
+		"branch-alias": {
+			"dev-master": "2.1-dev"
+		}
+	}
 
 }
