@@ -12,11 +12,13 @@
  * @link     https://github.com/opensky/Symfony2-coding-standard
  */
 
+namespace PHP_CodeSniffer\Standards\Symfony2\Sniffs\NamingConventions;
+
 use PHP_CodeSniffer\Files\File;
 use PHP_CodeSniffer\Sniffs\Sniff;
 
 /**
- * Symfony2_Sniffs_NamingConventions_InterfaceSuffixSniff.
+ * InterfaceSuffixSniff.
  *
  * Throws errors if interface names are not suffixed with "Interface".
  *
@@ -28,7 +30,7 @@ use PHP_CodeSniffer\Sniffs\Sniff;
  * @license  http://spdx.org/licenses/MIT MIT License
  * @link     https://github.com/opensky/Symfony2-coding-standard
  */
-class Symfony2_Sniffs_NamingConventions_InterfaceSuffixSniff implements Sniff {
+class InterfaceSuffixSniff implements Sniff {
 	/**
 	 * A list of tokenizers this sniff supports.
 	 *

@@ -13,6 +13,7 @@
  * @version   CVS: $Id: MethodScopeSniff.php 301632 2010-07-28 01:57:56Z squiz $
  * @link      http://pear.php.net/package/PHP_CodeSniffer
  */
+namespace PHP_CodeSniffer\Standards\Symfony2\Sniffs\Scope;
 
 use PHP_CodeSniffer\Exceptions\RuntimeException;
 use PHP_CodeSniffer\Files\File;
@@ -35,7 +36,7 @@ if (class_exists('PHP_CodeSniffer\Sniffs\AbstractScopeSniff', true) === false) {
  * @version   Release: 1.3.0
  * @link      http://pear.php.net/package/PHP_CodeSniffer
  */
-class Symfony2_Sniffs_Scope_MethodScopeSniff extends AbstractScopeSniff {
+class MethodScopeSniff extends AbstractScopeSniff {
 	/**
 	 * Constructs a Symfony2_Sniffs_Scope_MethodScopeSniff.
 	 */

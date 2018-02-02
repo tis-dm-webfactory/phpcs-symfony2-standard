@@ -12,11 +12,13 @@
  * @link     https://github.com/opensky/Symfony2-coding-standard
  */
 
+namespace PHP_CodeSniffer\Standards\Symfony2\Sniffs\WhiteSpace;
+
 use PHP_CodeSniffer\Files\File;
 use PHP_CodeSniffer\Sniffs\Sniff;
 
 /**
- * Symfony2_Sniffs_WhiteSpace_DiscourageFitzinatorSniff.
+ * DiscourageFitzinatorSniff.
  *
  * Throws warnings if a file contains trailing whitespace.
  *
@@ -26,7 +28,7 @@ use PHP_CodeSniffer\Sniffs\Sniff;
  * @license  http://spdx.org/licenses/MIT MIT License
  * @link     https://github.com/opensky/Symfony2-coding-standard
  */
-class Symfony2_Sniffs_WhiteSpace_DiscourageFitzinatorSniff implements Sniff {
+class DiscourageFitzinatorSniff implements Sniff {
 
 	/**
 	 * A list of tokenizers this sniff supports.

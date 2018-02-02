@@ -12,9 +12,11 @@
  * @link     https://github.com/opensky/Symfony2-coding-standard
  */
 
+namespace PHP_CodeSniffer\Standards\Symfony2\Sniffs\Commenting;
+
 use PHP_CodeSniffer\Exceptions\RuntimeException;
 use PHP_CodeSniffer\Files\File;
-use PHP_CodeSniffer\Standards\PEAR\Sniffs\Commenting\FunctionCommentSniff;
+use PHP_CodeSniffer\Standards\PEAR\Sniffs\Commenting\FunctionCommentSniff as BaseFunctionCommentSniff;
 
 if (class_exists('PHP_CodeSniffer\Standards\PEAR\Sniffs\Commenting\FunctionCommentSniff', true) === false) {
 	$error = 'Class PHP_CodeSniffer\Standards\PEAR\Sniffs\Commenting\FunctionCommentSniff not found';
@@ -35,7 +37,7 @@ if (class_exists('PHP_CodeSniffer\Standards\PEAR\Sniffs\Commenting\FunctionComme
  * @license  http://spdx.org/licenses/BSD-3-Clause BSD 3-clause "New" or "Revised" License
  * @link     http://pear.php.net/package/PHP_CodeSniffer
  */
-class Symfony2_Sniffs_Commenting_FunctionCommentSniff extends FunctionCommentSniff {
+class FunctionCommentSniff extends BaseFunctionCommentSniff {
 
 	/**
 	 * @var string
@@ -84,7 +86,7 @@ class Symfony2_Sniffs_Commenting_FunctionCommentSniff extends FunctionCommentSni
 		return preg_match('#{@inheritdoc}#i', $content) === 1;
 	} /* end processReturn() */
 
-		/**
+	/**
 	 * Is the return statement matching?
 	 *
 	 * @param array $tokens    Array of tokens
@@ -100,7 +102,7 @@ class Symfony2_Sniffs_Commenting_FunctionCommentSniff extends FunctionCommentSni
 		return $tokens[$returnPos]['code'] !== T_SEMICOLON;
 	} // end isInheritDoc()
 
-		/**
+	/**
 	 * Check if the given function visibility scope needs to have a docblock.
 	 *
 	 * @param string $scope Visibility scope of the function.
@@ -111,7 +113,7 @@ class Symfony2_Sniffs_Commenting_FunctionCommentSniff extends FunctionCommentSni
 		return strpos($this->requiredScopes, $scope) !== false;
 	} // end processParams()
 
-/**
+	/**
 	 * {@inheritdoc}
 	 */
 	protected function processParams(File $phpcsFile, $stackPtr, $commentStart) {
@@ -122,7 +124,7 @@ class Symfony2_Sniffs_Commenting_FunctionCommentSniff extends FunctionCommentSni
 		parent::processParams($phpcsFile, $stackPtr, $commentStart);
 	}
 
-/**
+	/**
 	 * {@inheritdoc}
 	 */
 	protected function processReturn(File $phpcsFile, $stackPtr, $commentStart) {

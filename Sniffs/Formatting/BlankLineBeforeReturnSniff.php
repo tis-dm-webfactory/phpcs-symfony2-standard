@@ -12,12 +12,13 @@
  * @version  GIT: master
  * @link     https://github.com/opensky/Symfony2-coding-standard
  */
+namespace PHP_CodeSniffer\Standards\Symfony2\Sniffs\Formatting;
 
 use PHP_CodeSniffer\Files\File;
 use PHP_CodeSniffer\Sniffs\Sniff;
 
 /**
- * Symfony2_Sniffs_Formatting_BlankLineBeforeReturnSniff.
+ * BlankLineBeforeReturnSniff.
  *
  * Throws errors if there's no blank line before return statements. Symfony
  * coding standard specifies: "Add a blank line before return statements,
@@ -29,7 +30,7 @@ use PHP_CodeSniffer\Sniffs\Sniff;
  * @license  http://spdx.org/licenses/MIT MIT License
  * @link     https://github.com/opensky/Symfony2-coding-standard
  */
-class Symfony2_Sniffs_Formatting_BlankLineBeforeReturnSniff implements Sniff {
+class BlankLineBeforeReturnSniff implements Sniff {
 	/**
 	 * A list of tokenizers this sniff supports.
 	 *
@@ -73,7 +74,8 @@ class Symfony2_Sniffs_Formatting_BlankLineBeforeReturnSniff implements Sniff {
 		} else if (count($prevLineTokens) > 0) {
 			$phpcsFile->addError(
 				'Missing blank line before return statement',
-				$stackPtr
+				$stackPtr,
+				'No blank line'
 			);
 		}
 

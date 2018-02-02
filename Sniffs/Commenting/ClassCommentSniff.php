@@ -14,7 +14,9 @@
  * @link      http://pear.php.net/package/PHP_CodeSniffer
  */
 
-use PHP_CodeSniffer\Standards\PEAR\Sniffs\Commenting\ClassCommentSniff;
+namespace PHP_CodeSniffer\Standards\Symfony2\Sniffs\Commenting;
+
+use PHP_CodeSniffer\Standards\PEAR\Sniffs\Commenting\ClassCommentSniff as BaseClassCommentSniff;
 
 if (class_exists('PHP_CodeSniffer\Tokenizers\Comment', true) === false) {
 	$error = 'Class PHP_CodeSniffer\Tokenizers\Comment not found';
@@ -49,7 +51,7 @@ if (class_exists('PHP_CodeSniffer\Standards\PEAR\Sniffs\Commenting\ClassCommentS
  * @version   Release: 1.3.0RC2
  * @link      http://pear.php.net/package/PHP_CodeSniffer
  */
-class Symfony2_Sniffs_Commenting_ClassCommentSniff extends ClassCommentSniff {
+class ClassCommentSniff extends BaseClassCommentSniff {
 	/**
 	 * Tags in correct order and related info.
 	 *

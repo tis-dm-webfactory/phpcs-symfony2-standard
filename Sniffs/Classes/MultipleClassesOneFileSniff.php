@@ -13,6 +13,8 @@
  * @link     https://github.com/opensky/Symfony2-coding-standard
  */
 
+namespace PHP_CodeSniffer\Standards\Symfony2\Sniffs\Classes;
+
 use PHP_CodeSniffer\Files\File;
 use PHP_CodeSniffer\Sniffs\Sniff;
 
@@ -29,7 +31,7 @@ use PHP_CodeSniffer\Sniffs\Sniff;
  * @license  http://spdx.org/licenses/MIT MIT License
  * @link     https://github.com/opensky/Symfony2-coding-standard
  */
-class Symfony2_Sniffs_Classes_MultipleClassesOneFileSniff implements Sniff {
+class MultipleClassesOneFileSniff implements Sniff {
 	/**
 	 * A list of tokenizers this sniff supports.
 	 *
