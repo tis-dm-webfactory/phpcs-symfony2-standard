@@ -41,6 +41,7 @@
 		<exclude name="Generic.Formatting.SpaceAfterNot.Incorrect"/>
 		<exclude name="Generic.NamingConventions.CamelCapsFunctionName.ScopeNotCamelCaps"/>
 		<exclude name="Generic.CodeAnalysis.ForLoopWithTestFunctionCall.NotAllowed"/>
+		<exclude name="Generic.Formatting.SpaceAfterCast.NoSpace"/>
 	</rule>
 
 	<rule ref="Generic.Classes.DuplicateClassName"/>
@@ -124,6 +125,7 @@
 		<exclude name="PEAR.ControlStructures.MultiLineCondition.StartWithBoolean"/>
 		<exclude name="PEAR.ControlStructures.MultiLineCondition.Alignment"/>
 		<exclude name="PEAR.Files.IncludingFile.BracketsNotRequired"/>
+		<exclude name="PEAR.WhiteSpace.ScopeIndent.Incorrect"/>
 	</rule>
 
 	<!-- We provide our own subclass of PEAR's ClassComment and FunctionComment sniff, but these will do: -->
