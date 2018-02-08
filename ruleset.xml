@@ -127,6 +127,7 @@
 		<exclude name="PEAR.Files.IncludingFile.BracketsNotRequired"/>
 		<exclude name="PEAR.WhiteSpace.ScopeIndent.Incorrect"/>
 		<exclude name="PEAR.Commenting.ClassComment.EmptyDeprecatedTag"/>
+		<exclude name="PEAR.WhiteSpace.ScopeIndent.IncorrectExact"/>
 	</rule>
 
 	<!-- We provide our own subclass of PEAR's ClassComment and FunctionComment sniff, but these will do: -->
