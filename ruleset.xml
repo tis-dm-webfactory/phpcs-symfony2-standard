@@ -127,6 +127,9 @@
 		<exclude name="PEAR.Files.IncludingFile.BracketsNotRequired"/>
 		<exclude name="PEAR.WhiteSpace.ScopeIndent.Incorrect"/>
 		<exclude name="PEAR.Commenting.ClassComment.EmptyDeprecatedTag"/>
+		<exclude name="PEAR.WhiteSpace.ScopeIndent.IncorrectExact"/>
+		<exclude name="PEAR.Commenting.FunctionComment.MissingReturn"/>
+		<exclude name="PEAR.Commenting.FunctionComment.MissingParamName"/>
 	</rule>
 
 	<!-- We provide our own subclass of PEAR's ClassComment and FunctionComment sniff, but these will do: -->
@@ -165,6 +168,7 @@
 		<exclude name="PSR2.ControlStructures.ControlStructureSpacing.SpacingAfterOpenBrace"/>
 		<exclude name="PSR2.Methods.FunctionCallSignature.SpaceBeforeOpenBracket"/>
 		<exclude name="PSR2.Classes.PropertyDeclaration.Underscore"/>
+		<exclude name="PSR2.Methods.MethodDeclaration.Underscore"/>
 	</rule>
 
 	<!-- In practice, Symfony2 spaces multiline function calls differently than Zend -->
@@ -192,4 +196,5 @@
 	</rule>
 
 	<rule ref="Symfony2.Formatting.BlankLineBeforeReturn"/>
+	<rule ref="PEAR.Commenting.FunctionComment.MissingReturn"/>
 </ruleset>
