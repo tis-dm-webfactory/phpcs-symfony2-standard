@@ -196,5 +196,5 @@
 	</rule>
 
 	<rule ref="Symfony2.Formatting.BlankLineBeforeReturn"/>
-	<rule ref="PEAR.Commenting.FunctionComment.MissingReturn"/>
+	<rule ref="Symfony2.Commenting.FunctionComment.MissingReturn"/>
 </ruleset>
