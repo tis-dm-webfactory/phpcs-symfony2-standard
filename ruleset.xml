@@ -96,6 +96,7 @@
 		<exclude name="Squiz.PHP.DisallowInlineIf.Found"/>
 		<exclude name="Squiz.PHP.DiscouragedFunctions.Discouraged"/>
 		<exclude name="Squiz.PHP.CommentedOutCode.Found"/>
+		<exclude name="Squiz.Scope.MethodScope.Missing"/>
 	</rule>
 
 	<rule ref="Squiz.ControlStructures.ControlSignature"/>
@@ -130,6 +131,8 @@
 		<exclude name="PEAR.WhiteSpace.ScopeIndent.IncorrectExact"/>
 		<exclude name="PEAR.Commenting.FunctionComment.MissingReturn"/>
 		<exclude name="PEAR.Commenting.FunctionComment.MissingParamName"/>
+		<exclude name="PEAR.ControlStructures.MultiLineCondition.CloseBracketNewLine"/>
+		<exclude name="PEAR.Formatting.MultiLineAssignment.EqualSignLine"/>
 	</rule>
 
 	<!-- We provide our own subclass of PEAR's ClassComment and FunctionComment sniff, but these will do: -->
