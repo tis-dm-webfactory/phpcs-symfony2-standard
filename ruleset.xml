@@ -133,6 +133,7 @@
 		<exclude name="PEAR.Commenting.FunctionComment.MissingParamName"/>
 		<exclude name="PEAR.ControlStructures.MultiLineCondition.CloseBracketNewLine"/>
 		<exclude name="PEAR.Formatting.MultiLineAssignment.EqualSignLine"/>
+		<exclude name="PEAR.Commenting.ClassComment.SeeTagOrder"/>
 	</rule>
 
 	<!-- We provide our own subclass of PEAR's ClassComment and FunctionComment sniff, but these will do: -->
